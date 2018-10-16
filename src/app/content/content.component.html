@@ -1,13 +1,16 @@
-<div class="card">
+<div class="card-deck">
+    <div class="card" *ngFor="let popularPolicy of popularList">
 
-    <div class="card-header">
-        {{popularPolicy.policyName}}
-    </div>
-    <div class="card-body">
-        {{popularPolicy.description}}
-    </div>
-    <div class='card-footer'>
-        <button class="btn btn-danger">Show Details</button>
+        <div class="card-header">
+            {{popularPolicy.policyName}}
+        </div>
+        <div class="card-body">
+            {{popularPolicy.description}}
+        </div>
+        <div class='card-footer'>
+            <button class="btn btn-danger">Show Details</button>
+        </div>
+
     </div>
 
 </div>
