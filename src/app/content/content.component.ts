@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {PolicyDetails} from '../policy-details';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  popularPolicy: PolicyDetails;
+  constructor() {
+
+    this.popularPolicy = {'policyName': 'Jeevan Bhima',
+      'description': ' Survival Beenfit Bonus plus 500000 on maturity'};
+   }
 
   ngOnInit() {
   }

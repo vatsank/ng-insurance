@@ -1,0 +1,6 @@
+.panel {
+    width: 25%;
+    height: 150px;
+    border: 2px solid #ff000f;
+    background-color: #008000;
+}
