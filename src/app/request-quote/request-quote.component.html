@@ -1,0 +1,7 @@
+<label>Policy Name</label>
+<input type='text' [(ngModel)]='policyName'>
+
+
+
+<app-process-quote [requestedPolicy]='policyName' (quote)='onChange($event)'></app-process-quote>
+{{result}}

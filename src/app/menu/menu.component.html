@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        <li *ngFor="let eachLink of linkText">
+            <a [href]='eachLink.linkRef'>{{eachLink.linkText}}</a>
+        </li>
+    </ul>
+</nav>

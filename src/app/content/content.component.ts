@@ -9,8 +9,11 @@ import {PolicyDetails} from '../policy-details';
 })
 export class ContentComponent implements OnInit {
 
+  show = false;
   popularPolicy: PolicyDetails;
   popularList: PolicyDetails[];
+
+  info: string;
   constructor(private service: PolicyAPIService) {
 
     this.popularPolicy = {'policyName': 'Jeevan Bhima',
@@ -20,7 +23,15 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
 
      this.service.getPopularPolicies().
-             subscribe(resp => this.popularList = resp);
+              subscribe(resp => this.popularList = resp);
   }
 
+  showInfo(idx: number) {
+
+   const selected = ++idx;
+
+
+    this.info = 'Contact our Agent Ramesh 9494949889';
+
+  }
 }

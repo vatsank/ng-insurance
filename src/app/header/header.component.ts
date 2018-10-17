@@ -1,3 +1,4 @@
+import { PageLink } from './../page-link';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  linkTxt = 'Home';
+
+  linkList: PageLink[] = [
+    {linkRef: 'home.html', linkText: 'Home'},
+    {linkRef: 'Products.html', linkText: 'Products'},
+    {linkRef: 'Claims.html', linkText: 'Claims'},
+    {linkRef: 'Payment.html', linkText: 'Payments'},
+
+  ];
 
   majheading: string;
   logo: string;
