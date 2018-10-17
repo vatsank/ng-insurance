@@ -11,6 +11,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RequestQuoteComponent } from './request-quote/request-quote.component';
 import { ProcessQuoteComponent } from './process-quote/process-quote.component';
 import { TestimonyComponent } from './testimony/testimony.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TestimonyComponent } from './testimony/testimony.component';
     MenuComponent,
     RequestQuoteComponent,
     ProcessQuoteComponent,
-    TestimonyComponent
+    TestimonyComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
     {linkRef: 'Products.html', linkText: 'Products'},
     {linkRef: 'Claims.html', linkText: 'Claims'},
     {linkRef: 'Payment.html', linkText: 'Payments'},
+    {linkRef: 'Payment.html', linkText: 'Payments'}
 
   ];
 
