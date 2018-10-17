@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '
 import {PolicyDetails} from '../policy-details';
 import { TestimonyComponent } from '../testimony/testimony.component';
 import {Comment} from '../comment';
+import { Agent } from '../agent';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -15,11 +16,13 @@ export class ContentComponent implements OnInit, AfterViewInit {
   show = false;
   popularPolicy: PolicyDetails;
   popularList: PolicyDetails[];
+  agentList: Agent[]
   comments: Comment[];
-
+  bgColor = 'yellow';
   info: string;
 
   @ViewChild(TestimonyComponent) testimony: TestimonyComponent;
+  heading: string[];
 
   constructor(private service: PolicyAPIService, private detector: ChangeDetectorRef) {
 
@@ -31,6 +34,11 @@ export class ContentComponent implements OnInit, AfterViewInit {
 
      this.service.getPopularPolicies().
               subscribe(resp => this.popularList = resp);
+
+              this.service.getAgents().subscribe(resp =>{
+                this.agentList = resp;
+                this.heading = Object.keys(this.agentList[0]);
+              });
   }
 
   showInfo(idx: number) {

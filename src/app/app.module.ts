@@ -13,6 +13,8 @@ import { ProcessQuoteComponent } from './process-quote/process-quote.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { HighLightDirective } from './high-light.directive';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { LogoutComponent } from './logout/logout.component';
     ProcessQuoteComponent,
     TestimonyComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    HighLightDirective,
+    GridComponent
   ],
   imports: [
     BrowserModule,

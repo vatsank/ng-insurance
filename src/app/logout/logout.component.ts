@@ -16,5 +16,7 @@ export class LogoutComponent implements OnInit {
   logout() {
 
      this.service.change('logout');
+
+
   }
 }

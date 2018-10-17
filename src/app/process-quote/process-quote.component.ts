@@ -26,6 +26,6 @@ export class ProcessQuoteComponent implements OnInit {
   }
 
   sendQuote() {
-      this.quote.emit(this.policyDetails.get(this.requestedPolicy));            );
-  }
+      this.quote.emit(this.policyDetails.get(this.requestedPolicy));
+      }
 }

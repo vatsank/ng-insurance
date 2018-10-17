@@ -1,0 +1,11 @@
+<table>
+
+    <tr>
+        <th *ngFor='let eachHeader of headers'>{{eachHeader}}</th>
+    </tr>
+    <tr *ngFor='let eachData of data'>
+        <td *ngFor='let eachHead of headers'>
+            {{eachData[eachHead]}}
+        </td>
+    </tr>
+</table>

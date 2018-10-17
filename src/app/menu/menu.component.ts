@@ -16,7 +16,6 @@ export class MenuComponent implements OnInit {
   constructor(private service: CompCommunicationService) { }
 
   ngOnInit() {
-
      this.service.currentMessage.
             subscribe(resp => {
               this.msg = resp;
