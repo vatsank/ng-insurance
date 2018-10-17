@@ -5,3 +5,17 @@
     font-style: oblique;
     font-weight: bolder;
 }
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid #a52a2a;
+    border-radius: 15px 10px;
+    flex-direction: column;
+    margin-right: 20px;
+}

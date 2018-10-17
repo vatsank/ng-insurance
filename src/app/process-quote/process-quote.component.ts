@@ -10,8 +10,10 @@ export class ProcessQuoteComponent implements OnInit {
 
    @Input() requestedPolicy: string;
    @Output() quote: EventEmitter<string> = new EventEmitter();
-    policyDetails: Map<string, string> = new Map();
-   constructor() {
+
+   policyDetails: Map<string, string> = new Map();
+
+    constructor() {
      this.policyDetails.set('jeevananand', 'one time premium');
      this.policyDetails.set('jeevanaasha', 'coverage for dependents');
      this.policyDetails.set('jeevanakashy', 'life coverage and bonus');

@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { MenuComponent } from './menu/menu.component';
 import { RequestQuoteComponent } from './request-quote/request-quote.component';
 import { ProcessQuoteComponent } from './process-quote/process-quote.component';
+import { TestimonyComponent } from './testimony/testimony.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProcessQuoteComponent } from './process-quote/process-quote.component';
     ContentComponent,
     MenuComponent,
     RequestQuoteComponent,
-    ProcessQuoteComponent
+    ProcessQuoteComponent,
+    TestimonyComponent
   ],
   imports: [
     BrowserModule,
