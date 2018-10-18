@@ -1,3 +1,26 @@
-<p>
-  registration works!
-</p>
+<div class='col-md-6'>
+    <form #f='ngForm' (ngSubmit)='submit(f.value)' ngNativeValidate>
+        <div class='form-group'>
+            <label for="">Policy Number</label>
+            <input type="text" name="policyNumber" required ncontrolgModel class='form-'>
+        </div>
+        <div class='form-group'>
+            <label for="">User Name</label>
+            <input type="text" name='userName' required ngModel class='form-control'>
+        </div>
+        <div class='form-group'>
+            <label for="">Password</label>
+            <input type="password" name='passWord' required ngModel class='form-control'>
+        </div>
+        <div class='form-group'>
+            <label for="">Email</label>
+            <input type="email" name='email' required ngModel class='form-control'>
+        </div>
+        <div class='form-group'>
+            <input type="submit" value="Register" [disabled]='f.invalid'>
+        </div>
+    </form>
+
+</div>
+
+{{newUser|json}}
