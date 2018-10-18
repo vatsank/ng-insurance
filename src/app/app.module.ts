@@ -18,6 +18,7 @@ import { GridComponent } from './grid/grid.component';
 import { ShowBranchDetailsComponent } from './show-branch-details/show-branch-details.component';
 import { FilterPipe } from './filter.pipe';
 import { RegistrationComponent } from './registration/registration.component';
+import { PolicyManagerComponent } from './policy-manager/policy-manager.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RegistrationComponent } from './registration/registration.component';
     GridComponent,
     ShowBranchDetailsComponent,
     FilterPipe,
-    RegistrationComponent
+    RegistrationComponent,
+    PolicyManagerComponent
   ],
   imports: [
     BrowserModule,

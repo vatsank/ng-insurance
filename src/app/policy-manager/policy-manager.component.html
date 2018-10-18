@@ -1,0 +1,92 @@
+<form #f='ngForm' (ngSubmit)='submit(f.value)' *ngIf='show'>
+
+    <div class='form-group'>
+
+    </div>
+    <div class='form-group'>
+        <label for="">id</label>
+        <input type="text" name="id" [(ngModel)]='policyData.id' class='form-control'>
+    </div>
+    <div class='form-group'>
+
+        <label for="">PolicyNumber</label>
+        <input type="text" name="policyNumber" [(ngModel)]='policyData.policyNumber' class='form-control'>
+
+    </div>
+
+    <div class='form-group'>
+
+        <label for="">policyHolderName</label>
+        <input type="text" name='policyHolderName' [(ngModel)]='policyData.policyHolderName' class='form-control'>
+
+    </div>
+
+    <div class='form-group'>
+
+        <label for="">status</label>
+        <input type="text" name='status' [(ngModel)]='policyData.status' class='form-control'>
+    </div>
+
+    <div class='form-group'>
+
+        <label for="">Maturity Date</label>
+        <input type="date" name='maturityDate' [(ngModel)]='policyData.maturityDate' class='form-control'>
+    </div>
+
+    <div class='form-group'>
+
+        <label for="">Policy Amount</label>
+        <input type="text" name='policyAmount' [(ngModel)]='policyData.policyAmount' class='form-control'>
+    </div>
+
+    <div class='form-group'>
+
+        <label for="">Premium</label>
+        <input type="text" name='premium' [(ngModel)]='policyData.premium' class='form-control'>
+    </div>
+
+    <div class='form-group'>
+
+
+        <label for="">Payment Mode</label>
+        <input type="text" name='paymentMode' [(ngModel)]='policyData.paymentMode' class='form-control'>
+    </div>
+
+    <div class='form-group'>
+
+        <input type="submit" [value]='btnText'>
+    </div>
+
+</form>
+
+<table class='table table-striped'>
+    <tr>
+        <th>Id</th>
+        <th>Policy Number</th>
+        <th>Policy Holder Name</th>
+        <th>Policy Amount</th>
+        <th>MaturityDate</th>
+        <th>paymentMode</th>
+        <th>Premium</th>
+        <th>
+            <button (click)='change()' class="fa fa-2x fa-plus"></button></th>
+    </tr>
+    <tr *ngFor=' let eachPolicy of policyList '>
+
+        <td>{{eachPolicy.id}}</td>
+        <td>
+            <p>{{eachPolicy.policyNumber}}
+            </p>
+            <p>{{eachPolicy.status}}</p>
+        </td>
+        <td>{{eachPolicy.policyHolderName}}</td>
+        <td>{{eachPolicy.policyAmount}}</td>
+        <td>{{eachPolicy.maturityDate}}</td>
+
+        <td>{{eachPolicy.paymentMode}}</td>
+        <td>{{eachPolicy.premium}}</td>
+        <td><button type='button ' (click)='edit(eachPolicy) ' class='fa fa-2x fa-edit '></button></td>
+        <td><button (click)='delete(eachPolicy) ' class='fa fa-2x fa-trash '></button></td>
+
+    </tr>
+</table>
