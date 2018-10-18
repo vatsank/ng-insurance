@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
    validate() {
      console.log('inside validate');
      this.service.change('logged');
+     localStorage.setItem('location', 'chennai');
      return true;
    }
 }

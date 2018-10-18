@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HighLightDirective } from './high-light.directive';
 import { GridComponent } from './grid/grid.component';
+import { ShowBranchDetailsComponent } from './show-branch-details/show-branch-details.component';
+import { FilterPipe } from './filter.pipe';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +32,17 @@ import { GridComponent } from './grid/grid.component';
     LoginComponent,
     LogoutComponent,
     HighLightDirective,
-    GridComponent
+    GridComponent,
+    ShowBranchDetailsComponent,
+    FilterPipe,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule , FormsModule
   ],
   providers: [HttpClient],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:  [ShowBranchDetailsComponent]
 })
 export class AppModule { }

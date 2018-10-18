@@ -1,9 +1,18 @@
 <div style="height:620px;margin-top: 40px;">
     <h4>Our Popular Policies</h4>
+
+    <label>Search by Policy</label>
+    <input type='search' [(ngModel)]='srchString'>
+
+
     <div class="card-deck">
-        <div class="card" *ngFor="let popularPolicy of popularList let idx=index">
+
+        <div class="card" *ngFor="let popularPolicy of popularList |
+                   filter:'policyName':srchString let idx=index ">
+
+
             <div class="card-header">
-                {{popularPolicy.policyName}}
+                {{popularPolicy.policyName |uppercase}}
             </div>
             <div class="card-body">
                 {{popularPolicy.description}}

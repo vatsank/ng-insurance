@@ -1,4 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+<p>{{currentDate|date:'medium'}}</p>
+<p>{{salary|currency:'INR':'symbol'}}</p>
+
 <div class="container">
 
     <div>
@@ -19,7 +23,11 @@
     </div>
 </div>
 
+<div #placeHolder></div>
 
+<div>
+    <button (click)='showBranch()'>Show Branches</button>
+</div>
 
 
 <router-outlet></router-outlet>

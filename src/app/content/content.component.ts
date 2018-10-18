@@ -21,6 +21,8 @@ export class ContentComponent implements OnInit, AfterViewInit {
   bgColor = 'yellow';
   info: string;
 
+  srchString = '';
+
   @ViewChild(TestimonyComponent) testimony: TestimonyComponent;
   heading: string[];
 
