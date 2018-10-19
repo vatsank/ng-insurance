@@ -14,8 +14,10 @@ export class PolicyManagerComponent implements OnInit {
   policyData = new Policy(0, 0, '', '', new Date() , 0, 0, 'QTR');
   status: string;
    show = false;
+
    showup =true;
    showdown =false;
+
    btnText = 'ADD';
   @ViewChild('f') frm: any;
   policyList: Policy[];
@@ -32,8 +34,8 @@ export class PolicyManagerComponent implements OnInit {
    change(){
 
     this.show = !this.show;
-    this.showup =false;
-    this.showdown =true;
+    this.showup = !this.showup;
+    this.showdown = !this.showdown;
     }
   submit() {
 

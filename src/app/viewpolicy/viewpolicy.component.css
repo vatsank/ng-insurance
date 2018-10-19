@@ -1,0 +1,16 @@
+ul>li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    margin: 10px 10px;
+    font-size: 1.4em;
+    color: magenta;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}

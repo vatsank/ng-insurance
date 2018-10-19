@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UniversalGuard implements CanActivate {
+export class UniversalGuard implements CanActivate , CanDeactivate<Object> {
+
+  canDeactivate(component: Object, currentRoute: ActivatedRouteSnapshot, currentState:
+     RouterStateSnapshot, nextState?: RouterStateSnapshot): boolean {
+
+      return confirm('are you sure');
+  }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot):boolean{

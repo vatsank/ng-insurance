@@ -21,6 +21,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { PolicyManagerComponent } from './policy-manager/policy-manager.component';
 
 import {NgxPaginationModule} from 'ngx-pagination';
+import { VehcileInsuranceComponent } from './vehcile-insurance/vehcile-insurance.component';
+import { HealthInsuranceComponent } from './health-insurance/health-insurance.component';
+import { ViewpolicyComponent } from './viewpolicy/viewpolicy.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ShowBranchDetailsComponent,
     FilterPipe,
     RegistrationComponent,
-    PolicyManagerComponent
+    PolicyManagerComponent,
+    VehcileInsuranceComponent,
+    HealthInsuranceComponent,
+    ViewpolicyComponent
   ],
   imports: [
     BrowserModule,

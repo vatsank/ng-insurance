@@ -1,0 +1,12 @@
+<div>
+    <table class='table table-striped'>
+        <tr *ngFor='let eachName of names'>
+            <td>
+                <a [routerLink]="['/policy/health',eachName]">{{eachName}}</a>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<p style='background-color: yellow'>{{status}}</p>
