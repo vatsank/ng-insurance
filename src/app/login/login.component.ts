@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CompCommunicationService } from '../comp-communication.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private service: CompCommunicationService,
-          private builder: FormBuilder) { }
+          private builder: FormBuilder,private router: Router) { }
 
   ngOnInit() {
 
@@ -42,9 +43,13 @@ export class LoginComponent implements OnInit {
      const uname = this.loginForm.controls.userName.value;
      const pword = this.loginForm.controls.passWord.value;
 
-     if(uname === 'india' && pword=== 'india'){
+     if(uname === 'india' && pword === 'india'){
             this.service.change('logged');
             localStorage.setItem('location', 'chennai');
+            sessionStorage.setItem('status', 'logged');
+            this.router.navigate(['/home']);
+
+
         result = true;
      }
      return result;

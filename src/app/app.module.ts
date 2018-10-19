@@ -20,6 +20,8 @@ import { FilterPipe } from './filter.pipe';
 import { RegistrationComponent } from './registration/registration.component';
 import { PolicyManagerComponent } from './policy-manager/policy-manager.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,7 @@ import { PolicyManagerComponent } from './policy-manager/policy-manager.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule , FormsModule , ReactiveFormsModule
+    AppRoutingModule, HttpClientModule , FormsModule , ReactiveFormsModule, NgxPaginationModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent],

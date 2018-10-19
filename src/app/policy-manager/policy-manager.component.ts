@@ -9,10 +9,13 @@ import { Policy } from '../policy';
 })
 export class PolicyManagerComponent implements OnInit {
 
+   p = 0;
+
   policyData = new Policy(0, 0, '', '', new Date() , 0, 0, 'QTR');
   status: string;
    show = false;
-
+   showup =true;
+   showdown =false;
    btnText = 'ADD';
   @ViewChild('f') frm: any;
   policyList: Policy[];
@@ -28,8 +31,10 @@ export class PolicyManagerComponent implements OnInit {
    }
    change(){
 
-    this.show =true;
-   }
+    this.show = !this.show;
+    this.showup =false;
+    this.showdown =true;
+    }
   submit() {
 
 

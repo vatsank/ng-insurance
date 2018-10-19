@@ -14,7 +14,8 @@ export class HeaderComponent implements OnInit {
     {linkRef: 'register', linkText: 'Registration'},
     {linkRef: 'home', linkText: 'Home'},
     {linkRef: 'policy', linkText: 'View policy'},
-    {linkRef: 'quote', linkText: 'Get Quote'},
+    {linkRef: 'quote', linkText: 'Get Quote'}
+
 
 
 
