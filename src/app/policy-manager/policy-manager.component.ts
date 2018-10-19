@@ -9,7 +9,7 @@ import { Policy } from '../policy';
 })
 export class PolicyManagerComponent implements OnInit {
 
-  policyData: Policy;
+  policyData = new Policy(0, 0, '', '', new Date() , 0, 0, 'QTR');
   status: string;
    show = false;
 
@@ -30,28 +30,29 @@ export class PolicyManagerComponent implements OnInit {
 
     this.show =true;
    }
-  submit(frmData) {
+  submit() {
 
-    this.policyData = frmData;
 
-    if(this.btnText ='ADD') {
-      this.service.addPolicy(this.policyData,'life').subscribe(resp => {
-         this.status = 'One Policy Added';
-         this.policyList.push(this.policyData);
-      }, error => { console.log(error); });
-    }
-    if(this.btnText ='UPDATE') {
+        if(this.btnText === 'ADD') {
+          this.service.addPolicy(this.policyData,'life').subscribe(resp => {
+             this.status = 'One Policy Added';
+             this.policyList.push(this.policyData);
+          }, error => { console.log(error); });
+        }
+        if(this.btnText === 'UPDATE') {
       this.service.updatePolicy(this.policyData, 'life').subscribe(resp=>{
         this.status = 'One Policy updated';
         this.policyList[this.pos] = resp;
       });
     }
   }
+
 edit(policy){
 
-  this.btnText = 'UPDATE';
   this.policyData = policy;
   this.show = true;
+  this.btnText = 'UPDATE';
+
   this.pos = this.policyList.indexOf(policy);
 
 

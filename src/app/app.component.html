@@ -1,7 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<p>{{currentDate|date:'medium'}}</p>
-<p>{{salary|currency:'INR':'symbol'}}</p>
+
 
 <div class="container">
 
@@ -9,21 +8,7 @@
         <app-header></app-header>
     </div>
     <div>
-        <app-content></app-content>
-    </div>
-    <div>
-        <app-login></app-login>
-        <app-logout></app-logout>
-    </div>
-    <div>
-        <app-request-quote></app-request-quote>
-    </div>
-    <div>
-        <app-registration></app-registration>
-    </div>
-    <div>
-
-        <app-policy-manager></app-policy-manager>
+        <router-outlet></router-outlet>
     </div>
     <div>
         <app-footer></app-footer>
@@ -33,8 +18,5 @@
 <div #placeHolder></div>
 
 <div>
-    <button (click)='showBranch()'>Show Branches</button>
+
 </div>
-
-
-<router-outlet></router-outlet>

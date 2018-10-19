@@ -42,23 +42,24 @@
     <div class='form-group'>
 
         <label for="">Premium</label>
-        <input type="text" name='premium' [(ngModel)]='policyData.premium' class='form-control'>
+        <input type="text" name='premium' [(ngModel)]='policyData.premium' class='form-control' [ngModelOptions]="{updateOn:'blur'}">
     </div>
 
     <div class='form-group'>
 
 
-        <label for="">Payment Mode</label>
-        <input type="text" name='paymentMode' [(ngModel)]='policyData.paymentMode' class='form-control'>
+        <label for=" ">Payment Mode</label>
+        <input type="text " name='paymentMode' [(ngModel)]='policyData.paymentMode' class='form-control'>
     </div>
 
     <div class='form-group'>
 
-        <input type="submit" [value]='btnText'>
+        <input type="submit " [value]='btnText'>
     </div>
 
 </form>
-
+<p>Details :{{policyData |json}}
+</p>
 <table class='table table-striped'>
     <tr>
         <th>Id</th>
@@ -68,8 +69,8 @@
         <th>MaturityDate</th>
         <th>paymentMode</th>
         <th>Premium</th>
-        <th>
-            <button (click)='change()' class="fa fa-2x fa-plus"></button></th>
+        <th colspan='2' style='text-align: center'>
+            <button (click)='change()' class="fa fa-2x fa-plus "></button></th>
     </tr>
     <tr *ngFor=' let eachPolicy of policyList '>
 
@@ -79,12 +80,12 @@
             </p>
             <p>{{eachPolicy.status}}</p>
         </td>
-        <td>{{eachPolicy.policyHolderName}}</td>
-        <td>{{eachPolicy.policyAmount}}</td>
-        <td>{{eachPolicy.maturityDate}}</td>
+        <td>{{eachPolicy.policyHolderName |uppercase}}</td>
+        <td>{{eachPolicy.policyAmount | currency :'INR':'symbol'}}</td>
+        <td>{{eachPolicy.maturityDate |date:'short'}}</td>
 
         <td>{{eachPolicy.paymentMode}}</td>
-        <td>{{eachPolicy.premium}}</td>
+        <td>{{eachPolicy.premium |currency :'INR':'symbol'}}</td>
         <td><button type='button ' (click)='edit(eachPolicy) ' class='fa fa-2x fa-edit '></button></td>
         <td><button (click)='delete(eachPolicy) ' class='fa fa-2x fa-trash '></button></td>
 

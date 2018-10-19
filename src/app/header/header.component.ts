@@ -11,12 +11,15 @@ export class HeaderComponent implements OnInit {
   linkTxt = 'Home';
 
   linkList: PageLink[] = [
-    {linkRef: 'home.html', linkText: 'Home'},
-    {linkRef: 'Products.html', linkText: 'Products'},
-    {linkRef: 'Claims.html', linkText: 'Claims'},
-    {linkRef: 'Payment.html', linkText: 'Payments'}
+    {linkRef: 'register', linkText: 'Registration'},
+    {linkRef: 'home', linkText: 'Home'},
+    {linkRef: 'policy', linkText: 'View policy'},
+    {linkRef: 'quote', linkText: 'Get Quote'},
+
+
 
   ];
+
 
   majheading: string;
   logo: string;
