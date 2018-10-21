@@ -20,3 +20,16 @@
 <div>
 
 </div>
+
+<label>User Name</label>
+<input type='text' [(ngModel)]='userName'>
+
+<app-lifecycle [name]='userName'>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+
+    </table>
+</app-lifecycle>

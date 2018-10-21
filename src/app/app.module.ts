@@ -24,6 +24,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { VehcileInsuranceComponent } from './vehcile-insurance/vehcile-insurance.component';
 import { HealthInsuranceComponent } from './health-insurance/health-insurance.component';
 import { ViewpolicyComponent } from './viewpolicy/viewpolicy.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ViewpolicyComponent } from './viewpolicy/viewpolicy.component';
     PolicyManagerComponent,
     VehcileInsuranceComponent,
     HealthInsuranceComponent,
-    ViewpolicyComponent
+    ViewpolicyComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,

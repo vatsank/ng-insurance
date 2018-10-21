@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'home' , component: ContentComponent,canActivate:[UniversalGuard]},
   {path: 'policy', component: ViewpolicyComponent, canActivate:[UniversalGuard],children: [
      {path: 'health',component: HealthInsuranceComponent},
-     {path:'health/:name', component:HealthInsuranceComponent}
+     {path:'health/:name', component:HealthInsuranceComponent},
      {path: 'life',component:PolicyManagerComponent},
      {path: 'vehcile', component: VehcileInsuranceComponent}]},
   {path: 'logout', component: LogoutComponent },
@@ -33,7 +33,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

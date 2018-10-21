@@ -10,7 +10,7 @@ import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'Insurance';
-
+  userName = 'ramesh';
   currentDate = new Date();
 
   salary = 45000;
