@@ -18,7 +18,9 @@ export class HealthInsuranceComponent implements OnInit {
     this.route.params.subscribe(param =>{
 
       const srchName = param['name'];
+      if (srchName !== undefined) {
       this.status = 'getting details of ' + srchName ;
+      }
     });
   }
 

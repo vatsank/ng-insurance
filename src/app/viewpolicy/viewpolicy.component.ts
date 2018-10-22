@@ -9,7 +9,8 @@ export class ViewpolicyComponent implements OnInit {
 
   health = 'assets/images/health.png';
   life = 'assets/images/life.png';
-  vechile= 'assets/images/vechile.png'
+  vechile = 'assets/images/vechile.png';
+  showMenu = true;
   constructor() { }
 
   ngOnInit() {

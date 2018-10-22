@@ -16,11 +16,11 @@ const routes: Routes = [
   {path: '' , redirectTo: 'login', pathMatch: 'full'},
   {path: 'login' , component: LoginComponent},
   {path: 'register' , component: RegistrationComponent , canActivate:[UniversalGuard], canDeactivate: [UniversalGuard]},
-  {path: 'home' , component: ContentComponent,canActivate:[UniversalGuard]},
-  {path: 'policy', component: ViewpolicyComponent, canActivate:[UniversalGuard],children: [
-     {path: 'health',component: HealthInsuranceComponent},
-     {path:'health/:name', component:HealthInsuranceComponent},
-     {path: 'life',component:PolicyManagerComponent},
+  {path: 'home' , component: ContentComponent, canActivate: [UniversalGuard]},
+  {path: 'policy', component: ViewpolicyComponent, canActivate: [UniversalGuard],children: [
+     {path: 'health',component: HealthInsuranceComponent },
+     {path:'health/:name', component: HealthInsuranceComponent},
+     {path: 'life',component: PolicyManagerComponent },
      {path: 'vehcile', component: VehcileInsuranceComponent}]},
   {path: 'logout', component: LogoutComponent },
   {path: 'quote', component: ProcessQuoteComponent ,canActivate:[UniversalGuard]},

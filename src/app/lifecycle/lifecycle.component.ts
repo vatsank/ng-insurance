@@ -42,4 +42,4 @@ export class LifecycleComponent implements OnInit , OnChanges, OnDestroy {
     }
   }
 
-}
+

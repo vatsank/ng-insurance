@@ -1,29 +1,27 @@
-<div class='container'>
-    <div class='row'>
+<div style='display: flex'>
 
-        <nav>
-            <ul>
-                <li>
-                    <a [routerLink]="['/policy/life']"><img [src]='life'></a>
+    <nav>
+        <ul>
+            <li>
 
-                </li>
-                <li>
-                    <a [routerLink]="['/policy/health']"><img [src]='health '>
-                    </a>
-                </li>
-                <li>
-                    <a [routerLink]="['/policy/vehcile']"><img [src]='vechile '>
-                    </a>
+                <a [routerLink]="['/policy/life']"><img [src]='life'></a>
 
-                </li>
-            </ul>
+            </li>
+            <li>
+                <a [routerLink]="['/policy/health']"><img [src]='health'></a>
 
-        </nav>
+            </li>
+            <li>
+                <a [routerLink]="['/policy/vehcile']"><img [src]='vechile '>
+                </a>
+
+            </li>
+        </ul>
+
+    </nav>
 
 
-
-        <div class='col-md-10 '>
-            <router-outlet></router-outlet>
-        </div>
+    <div>
+        <router-outlet></router-outlet>
     </div>
 </div>
