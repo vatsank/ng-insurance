@@ -23,14 +23,16 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.service.setViewRef(this.viewRef);
-    this.service.addComponent(ShowBranchDetailsComponent).subscribe(resp => {
-      this.branch = resp;
-       if( this.branch !== ''){
-               this.service.remove();
-           }
-    });
 }
 
+showGrid(){
+
+  this.service.setViewRef(this.viewRef);
+  this.service.addComponent(ShowBranchDetailsComponent).subscribe(resp => {
+    this.branch = resp;
+     if( this.branch !== ''){
+             this.service.remove();
+         }
+  });
+}
 }
