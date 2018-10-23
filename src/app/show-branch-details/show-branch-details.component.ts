@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-show-branch-details',
@@ -8,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class ShowBranchDetailsComponent implements OnInit {
 
   branchList: string[];
+
+  choice:BehaviorSubject<string> = new BehaviorSubject<string>('');
+
+  userEntry = this.choice.asObservable();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  sendBranch(branch: string){
+
+    this.choice.next(branch);
+     console.log(branch);
+  }
 }

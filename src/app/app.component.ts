@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
 
 
   @ViewChild('placeHolder', {read: ViewContainerRef}) viewRef: ViewContainerRef;
+  branch: string;
   constructor(private service: ComponentAdderService) {
 
   }
@@ -24,11 +25,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
     this.service.setViewRef(this.viewRef);
-    this.service.addComponent(ShowBranchDetailsComponent);
+    this.service.addComponent(ShowBranchDetailsComponent).subscribe(resp => {
+      this.branch = resp;
+       if( this.branch !== ''){
+               this.service.remove();
+           }
+    });
 }
-  // showBranch() {
 
-  //       this.service.setViewRef(this.viewRef);
-  //      this.service.addComponent(ShowBranchDetailsComponent);
-  // }
 }

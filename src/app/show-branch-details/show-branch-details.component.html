@@ -1,4 +1,5 @@
-<ul>
+<ul style='list-style: none;'>
 
-    <li *ngFor="let eachBranch of branchList">{{eachBranch |uppercase}}</li>
+    <li *ngFor="let eachBranch of branchList">
+        <button (click)='sendBranch(eachBranch)'>{{eachBranch}}</button></li>
 </ul>

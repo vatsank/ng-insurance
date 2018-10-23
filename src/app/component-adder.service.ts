@@ -6,6 +6,7 @@ import { ShowBranchDetailsComponent } from './show-branch-details/show-branch-de
 })
 export class ComponentAdderService {
 
+  userOption: string;
   viewRef: ViewContainerRef;
   constructor(private resolver: ComponentFactoryResolver) { }
 
@@ -32,8 +33,13 @@ export class ComponentAdderService {
 
       this.viewRef.insert(compRef.hostView);
 
-      setTimeout(()=>{
-        this.viewRef.detach();
-      },5000);
+ return   (<ShowBranchDetailsComponent>compRef.instance).userEntry;
+
+      // setTimeout(()=>{
+      //   this.viewRef.detach();
+      // },5000);
+  }
+  remove() {
+    this.viewRef.detach();
   }
 }
